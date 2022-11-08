@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Valor A: <input type="text" name="f_a"><p></p>
+            Valor B: <input type="text" name="f_b"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseInt(document.FormExerc.f_a.value);
+            var b = parseInt(document.FormExerc.f_b.value);
+            //processamento
+            var resp1 = (b);
+            var resp2 = (a);
+            //saida
+            window.alert( "o valor de A agora é: " + resp1 + "\n" + "o valor de B agora é: " + resp2);
+        }    
+    </script>
+</body>
+</html>

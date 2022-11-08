@@ -1,0 +1,72 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Numero 1: <input type="text" name="f_n1"><p></p>
+            Numero 2: <input type="text" name="f_n2"><p></p>
+            <input type="button" name="btn_executar" value="Multiplos?" onclick="executar()">
+            <input type="button" name="btn_executar" value="Pares?" onclick="executar2()">
+            <input type="button" name="btn_executar" value="Media?" onclick="executar3()">
+            <input type="reset" name="btn_cancela" value="Sair">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_n1.value);
+            var b = parseFloat(document.FormExerc.f_n2.value);
+
+            var conta = a * b;
+            if(conta%2== 0){
+                window.alert("Os numeros são multiplos um do outro");
+            }
+            else{
+                window.alert("Os numeros não são multiplos um do outro!");
+            }
+        }
+        function executar2(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_n1.value);
+            var b = parseFloat(document.FormExerc.f_n2.value);
+
+            if(a%2==0){
+                if(b%2==0){
+                    window.alert("os dois são pares");
+                }
+                else{
+                    window.alert("Numero 1 é: par \nNumero 2 é: impar");
+                }
+            }
+            else if(b%2==0){
+                if(a%2==0){
+                    window.alert("os dois são pares");
+                }
+                else{
+                    window.alert("Numero 1 é: impar \nNumero 2 é: par");
+                }
+            }
+            else{
+                window.alert("Entradas não são validas!");
+            }
+            
+            
+            window.alert("o resultado é: " + conta);
+        }
+        function executar3(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_n1.value);
+            var b = parseFloat(document.FormExerc.f_n2.value);
+
+            var media = ((a + b) / 2);
+
+            if(media => 7){
+                window.alert("A média é maior ou igual a 7: " + media);
+            }
+            else{
+                window.alert("A média é menor que 7: " + media);
+            }
+        }
+    </script>
+</body>
+</html>

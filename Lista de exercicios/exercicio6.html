@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Celsius: <input type="text" name="f_celsius"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var c = parseFloat(document.FormExerc.f_celsius.value);
+            //processamento
+            var f = ((9 * c + 160) / 5);
+            //saida
+            window.alert("A temperatura: " + c + "º Celsius, é igual a: " + f + "º Fahrenheit");
+        }    
+    </script>
+</body>
+</html>

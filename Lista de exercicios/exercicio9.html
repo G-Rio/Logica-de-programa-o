@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Anos: <input type="text" name="f_anos"><p></p>
+            Meses: <input type="text" name="f_meses"><p></p>
+            Dias: <input type="text" name="f_dias"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var anos = parseInt(document.FormExerc.f_anos.value);
+            var meses = parseInt(document.FormExerc.f_meses.value);
+            var dias = parseInt(document.FormExerc.f_dias.value);
+            //processamento
+            var conta1 = (anos * 365);
+            var conta2 = (meses * 30);
+            var conta3 = (conta1 + conta2 + dias);
+            //saida
+            window.alert("Sua idade em dias é: " + conta3 + ".");
+        }    
+    </script>
+</body>
+</html>

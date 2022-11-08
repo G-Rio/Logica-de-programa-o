@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conversão</h3>
+        <form name="FormExerc" action=" " method="post">
+            Valor em dolar : <input type="number" step="0.01" pattern="[0-9]*" name="f_vdolar"><p></p>
+            Dolar = <input type="text" name="f_dolar"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var dolar = parseFloat(document.FormExerc.f_dolar.value);
+            var vdolar = parseFloat(document.FormExerc.f_vdolar.value);
+            //saida
+            var conversao = (vdolar * dolar).toFixed(2);
+            window.alert("Esse valor em real é: " + conversao);
+        }
+</script>
+</body>
+</html>

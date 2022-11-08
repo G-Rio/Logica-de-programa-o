@@ -1,0 +1,40 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            A: <input type="text" name="f_a"><p></p>
+            B: <input type="text" name="f_b"><p></p>
+            C: <input type="text" name="f_c"><p></p>
+            D: <input type="text" name="f_d"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseInt(document.FormExerc.f_a.value);
+            var b = parseInt(document.FormExerc.f_b.value);
+            var c = parseInt(document.FormExerc.f_c.value);
+            var d = parseInt(document.FormExerc.f_d.value);
+            //processamento
+            var conta1 = (a + b);
+            var conta2 = (a + c);
+            var conta3 = (a + d);
+            var conta4 = (b + c);
+            var conta5 = (b + d);
+            var conta6 = (c + d);
+
+            var conta7 = (a * b);
+            var conta8 = (a * c);
+            var conta9 = (a * d);
+            var conta10 = (b * c);
+            var conta11 = (b * d);
+            var conta12 = (c * d);
+            //saida
+            window.alert("A resposta é conta 1: " + conta1 + " \nconta 2: " + conta2 + "\nconta 3: " + conta3 + "\nconta 4: " + conta4 + "\nconta 5: " + conta5 + "\nconta 6: " + conta6 + "\nconta 7: " + conta7 + "\nconta 8: " + conta8 + "\nconta 9: " + conta9 + "\nconta 10: " + conta10 + "\nconta 11: " + conta11 + "\nconta 12: " + conta12);
+        }    
+    </script>
+</body>
+</html>

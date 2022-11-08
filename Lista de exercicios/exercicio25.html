@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Altura: <input type="text" name="f_a"><p></p>
+            <input type="button" name="btn_executar" value="Homem" onclick="executar()">
+            <input type="button" name="btn_executar" value="Mulher" onclick="executar2()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_a.value);
+            //processamento
+            var conta = ((72.7 * a) - 58).toFixed(3);
+
+            window.alert("O peso é: " + conta + "g");
+            }
+            function executar2(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_a.value);
+            var conta = ((62.1 * a) - 44.7).toFixed(3);
+
+            window.alert("O peso é: " + conta + "g");
+            //processamento
+            
+            }
+    </script>
+</body>
+</html>

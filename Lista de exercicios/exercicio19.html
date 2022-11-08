@@ -1,0 +1,40 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            A: <input type="text" name="f_a"><p></p>
+            B: <input type="text" name="f_b"><p></p>
+            C: <input type="text" name="f_c"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseInt(document.FormExerc.f_a.value);
+            var b = parseInt(document.FormExerc.f_b.value);
+            var c = parseInt(document.FormExerc.f_c.value);
+            var soma1 = a + b;
+            var soma2 = b + c;
+            var soma3 = c + a;
+
+            if(a < soma1 && b < soma3 && c < soma1){
+                if(a == b && b == c){
+                    window.alert("triangulo equilatero");
+                }
+                else if(a == b || a == c || b == c){
+                    window.alert("triangulo isoceles");
+                }
+                else{
+                    window.alert("triangulo escaleno")
+                }
+            }
+            else{
+                window.alert("lados não caracterizam um triangulo")
+            }
+        }
+    </script>
+</body>
+</html>

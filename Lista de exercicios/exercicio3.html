@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Comissão</h3>
+        <form name="FormExerc" action=" " method="post">
+            Colaborador : <input type="text" name="f_colaborador"><p></p>
+            Codigo da peça : <input type="text" name="f_cpeca"><p></p>
+            Preço Unitario : <input type="text" name="f_punitario"><p></p>
+            Quantidade Vendida : <input type="text" name="f_qvendida"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            //colab = colaborador
+            //cpeca = codigo da peça
+            //punit = preço unitario
+            //qvenda = quantidade vendida
+            var colab = document.FormExerc.f_colaborador.value;
+            var cpeca = parseInt(document.FormExerc.f_cpeca.value);
+            var punit = parseFloat(document.FormExerc.f_punitario.value);
+            var qvend = parseInt(document.FormExerc.f_qvendida.value);
+            var porcent = 0.05;
+            //processamento
+            var conta = ((qvend * punit) * porcent).toFixed(2);
+            //saida
+            window.alert("O Colaborador: " + colab + " vendeu R$:" + (qvend * punit).toFixed(2) + " e lucrou R$: " + conta);
+        }    
+    </script>
+</body>
+</html>

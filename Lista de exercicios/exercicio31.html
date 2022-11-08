@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+    <script>
+    /* Escrever um programa que leia um conjunto de números positivos, e exiba se o número lido é par ou ímpar. Exiba ao final a soma total dos números pares lidos e também a soma dos números ímpares lidos. Suporemos que o
+    número de elementos deste conjunto não é conhecido, e que um número negativo será utilizado para sinalizar o fim dos dados. */
+    var somaimpares = 0, somapares = 0;
+         
+    do{
+        var N = parseInt(prompt());
+        if(N<0){
+            break;
+        }
+        if(N%2 == 0){
+            //é par mano!
+            somapares = somapares + N;
+        }
+        else if(N%2 == 1){
+            //xiii é impar mano!
+            somaimpares = somaimpares + N;
+        }
+    }while(N>=0);
+    
+
+    alert("Mano, a soma do pares = " + somapares + "\ne a soma dos ímpares = " + somaimpares);
+
+    
+    </script>
+</body>
+</html>

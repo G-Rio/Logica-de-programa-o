@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Raio: <input type="text" name="f_raio"><p></p>
+            Altura: <input type="text" name="f_altura"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var r = parseFloat(document.FormExerc.f_raio.value);
+            var a = parseFloat(document.FormExerc.f_altura.value);
+            //processamento
+            var v = (3.14159 * r * r * a).toFixed(1);
+            //saida
+            window.alert("O volume da lata de óleo é igual a: " + v + "l.");
+        }    
+    </script>
+</body>
+</html>

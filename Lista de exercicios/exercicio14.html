@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            A: <input type="text" name="f_a"><p></p>
+            B: <input type="text" name="f_b"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseInt(document.FormExerc.f_a.value);
+            var b = parseInt(document.FormExerc.f_b.value);
+            //processamento
+            if( a == b ){
+            window.alert("os dois valores são iguais não a diferença")
+            }
+            else if(a > b){
+                var c1 = a - b;
+                window.alert("A diferença é: " + c1);
+            }
+            else{
+                var c2 = b - a;
+                window.alert("A diferença é: " + c2);
+            }
+            }
+    </script>
+</body>
+</html>

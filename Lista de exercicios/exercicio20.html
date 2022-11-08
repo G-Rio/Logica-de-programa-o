@@ -1,0 +1,121 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            A: <input type="text" name="f_a"><p></p>
+            B: <input type="text" name="f_b"><p></p>
+            C: <input type="text" name="f_c"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseInt(document.FormExerc.f_a.value);
+            var b = parseInt(document.FormExerc.f_b.value);
+            var c = parseInt(document.FormExerc.f_c.value);
+
+            if(a > 0 && b > 0 && c > 0){
+                if( a == b && b == c){
+                    var c1 = (a * b);
+                    var c2 = (b / c);
+                window.alert("O valor 1 é igual a: " + c1 + "\nO valor 2 é igual a: " + c2);
+            }
+            //se algum for diferente a = b e c diferente
+            else if(a == b && c != a){
+                if(a > c){
+                    var c3 = (c * a);
+                    var c4 = (a / c);
+                    window.alert("O valor 1 é igual a: " + c3 + "\nO valor 2 é igual a: " + c4);
+                }
+                else{
+                    var c5 = (a * c);
+                    var c6 = (c / b);
+                    window.alert("O valor 1 é igual a: " + c5 + "\nO valor 2 é igual a: " + c6);
+                }
+            }
+            //se b = c e a diferente
+            else if(b == c && a != b){
+                if(b > a ){
+                    var c7 = (a * b);
+                    var c8 = (b / a);
+                    window.alert("O valor 1 é igual a: " + c7 + "\nO valor 2 é igual a: " + c8);
+                }
+                else{
+                    var c9 = (b * a);
+                    var c10 = (a / b);
+                    window.alert("O valor 1 é igual a: " + c9 + "\nO valor 2 é igual a: " + c10);
+                }
+            }
+            //se c = a e b diferente
+            else if(c == a && b != c){
+                if(c > b ){
+                    var c11 = (b * c);
+                    var c12 = (c / b);
+                    window.alert("O valor 1 é igual a: " + c11 + "\nO valor 2 é igual a: " + c12);
+                }
+                else{
+                    var c13 = (c * b);
+                    var c14 = (b / c);
+                    window.alert("O valor 1 é igual a: " + c13 + "\nO valor 2 é igual a: " + c14);
+                }
+            }
+            //tudo diferente
+            //a > b > c
+            else if(a > b && a > c){
+                if(b > c){
+                    var c15 = (c * a);
+                    var c16 = (a / c);
+                    window.alert("O valor 1 é igual a: " + c15 + "\nO valor 2 é igual a: " + c16);
+                }
+                else{
+                    var c17 = (b * a);
+                    var c18 = (a / b);
+                    window.alert("O valor 1 é igual a: " + c17 + "\nO valor 2 é igual a: " + c18);
+                }
+            }
+            else if(b > a && b > c){
+                if(a > c){
+                    var c19 = (c * b);
+                    var c20 = (b / c);
+                    window.alert("O valor 1 é igual a: " + c19 + "\nO valor 2 é igual a: " + c20);
+                }
+                else{
+                    var c21 = (a * b);
+                    var c22 = (b / a);
+                    window.alert("O valor 1 é igual a: " + c21 + "\nO valor 2 é igual a: " + c22);
+                }
+            }
+            else if(c > a && c > b){
+                if(a > b){
+                    var c23 = (b * c);
+                    var c24 = (c / b);
+                    window.alert("O valor 1 é igual a: " + c23 + "\nO valor 2 é igual a: " + c24);
+                }
+                else {
+                    var c25 = (a * c);
+                    var c26 = (c / a);
+                    window.alert("O valor 1 é igual a: " + c25 + "\nO valor 2 é igual a: " + c26);
+                }
+            }
+            }
+            else{
+                if(a <= 0 && b <= 0 && c <= 0){
+                    window.alert("Mais de um valor é menor que zero, colocar valores maiores que zero!");
+                }
+                else if(a <= 0){
+                    window.alert("Valor de A é menor que zero, colocar valor maior que zero!");
+                }
+                else if(b <= 0){
+                    window.alert("Valor de B é menor que zero, colocar valor maior que zero!");
+                }
+                else if(c <= 0){
+                    window.alert("Valor de C é menor que zero, colocar valor maior que zero!");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Tempo de Viagem: <input type="text" name="f_tviagem"><p></p>
+            Velocidade Média: <input type="text" name="f_vmedia"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var tempo = parseInt(document.FormExerc.f_tviagem.value);
+            var veloc = parseInt(document.FormExerc.f_vmedia.value);
+            //processamento
+            var distancia = (tempo * veloc);
+            var litros = (distancia / 12);
+            //Saida
+            window.alert("O tempo gasto na viagem foi de: " + tempo + "horas;\nforam utilizados: " + litros + "l; \nem uma distancia de: " + distancia + "km;\nna velocidade de: " + veloc + "KM/h.");
+        }    
+    </script>
+</body>
+</html>

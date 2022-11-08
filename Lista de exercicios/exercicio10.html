@@ -1,0 +1,36 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Valor 1: <input type="text" name="f_v1"><p></p>
+            Valor 2: <input type="text" name="f_v2"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var v1 = parseInt(document.FormExerc.f_v1.value);
+            var v2 = parseInt(document.FormExerc.f_v2.value);
+            var t = "";
+            //processamento
+            if(v1 == v2){
+                t = "Valores iguais"
+            }
+            else if( v1 < v2){
+                t = v2 + " é maior que " + v1
+            }
+            else if( v1 > v2){
+                t = v1 + " é maior que " + v2
+            }
+            else{
+                t = "valores diferentes"
+            }
+            //saida
+            window.alert("Os resultados possiveis são: " + t);
+        }    
+    </script>
+</body>
+</html>

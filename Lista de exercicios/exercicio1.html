@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>ECO</h3>
+        <form name="FormExerc" action=" " method="post">
+            Produto : <input type="text" name="f_produto"><p></p>
+            QUANTIDADE MINIMA : <input type="text" name="f_qminima"><p></p>
+            QUANTIDADE MAXIMA : <input type="text" name="f_qmaxima"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var qminima = parseInt(document.FormExerc.f_qminima.value);
+            var qmaxima = parseInt(document.FormExerc.f_qmaxima.value);
+            //processamento
+            var media = (qminima + qmaxima) / 2;
+            //saida
+            window.alert("A média de estoque desse produto é: " + media);
+        }    
+    </script>
+</body>
+</html>

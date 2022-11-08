@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            A: <input type="text" name="f_a"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseInt(document.FormExerc.f_a.value);
+            var t = "";
+            //processamento
+            if(a >= 0){
+                t = "o valor de A é: " + a;
+            }
+            else{
+                var conta = a * (-1);
+                t = "o valor de A é: " + conta;
+            }
+            //saida
+            window.alert(t);
+        }    
+    </script>
+</body>
+</html>

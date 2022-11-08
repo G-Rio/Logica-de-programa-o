@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Fahrenheit: <input type="text" name="f_fahren"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var f = parseFloat(document.FormExerc.f_fahren.value);
+            //processamento
+            var c = ((f - 32) * 5 / 9).toFixed(1);
+            //saida
+            window.alert("A temperatura: " + f + "º Fahrenheit, é igual a: " + c + "º Celsius.");
+        }    
+    </script>
+</body>
+</html>

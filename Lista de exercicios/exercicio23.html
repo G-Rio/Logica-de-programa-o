@@ -1,0 +1,50 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            Numero 1: <input type="text" name="f_n1"><p></p>
+            Numero 2: <input type="text" name="f_n2"><p></p>
+            <input type="button" name="btn_executar" value="Adição" onclick="executar()">
+            <input type="button" name="btn_executar" value="Subtração" onclick="executar2()">
+            <input type="button" name="btn_executar" value="Multiplicação" onclick="executar3()">
+            <input type="button" name="btn_executar" value="Divisão" onclick="executar4()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_n1.value);
+            var b = parseFloat(document.FormExerc.f_n2.value);
+
+            var conta = (a + b);
+            window.alert("o resultado é: " + conta);
+        }
+        function executar2(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_n1.value);
+            var b = parseFloat(document.FormExerc.f_n2.value);
+
+            var conta = (a - b);
+            window.alert("o resultado é: " + conta);
+        }
+        function executar3(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_n1.value);
+            var b = parseFloat(document.FormExerc.f_n2.value);
+
+            var conta = (a * b);
+            window.alert("o resultado é: " + conta);
+        }
+        function executar4(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_n1.value);
+            var b = parseFloat(document.FormExerc.f_n2.value);
+
+            var conta = (a / b);
+            window.alert("o resultado é: " + conta);
+        }
+    </script>
+</body>
+</html>

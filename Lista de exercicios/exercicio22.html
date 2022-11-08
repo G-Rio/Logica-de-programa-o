@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+    <h3>Conta</h3>
+        <form name="FormExerc" action=" " method="post">
+            A: <input type="text" name="f_a"><p></p>
+            <input type="button" name="btn_executar" value="Executar" onclick="executar()">
+            <input type="reset" name="btn_cancela" value="Cancelar">
+        </form>  
+    <script>
+        function executar(){
+            //entrada
+            var a = parseFloat(document.FormExerc.f_a.value);
+
+            if(a > 0){
+                document.write("numero positivo:" + a + "<br>numero negativo:");
+            }
+            else{
+                document.write("numero negativo:" + a + "<br>numero positivo:");
+            }
+        }
+    </script>
+</body>
+</html>
